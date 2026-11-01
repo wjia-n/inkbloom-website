@@ -23,7 +23,7 @@
       "name": "Which ebook formats does InkBloom Reader support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "InkBloom Reader supports 9 formats: EPUB, PDF, TXT, Markdown, HTML, FB2, RTF, DOCX, and ODT. MOBI and AZW files are not supported; convert them to EPUB first. Scanned, image-only PDFs are rejected with a clear message, because they contain no readable text."
+        "text": "InkBloom Reader supports 9 formats: EPUB, PDF, TXT, Markdown, HTML, FB2, RTF, DOCX, and ODT. MOBI and AZW files are not supported; convert them to EPUB first. Normal PDFs work fine — only scanned, image-only PDFs (pages that are just photos, with no text inside) can't be read yet, because InkBloom is fully offline and has no text-recognition engine to read words out of pictures."
       }
     },
     {

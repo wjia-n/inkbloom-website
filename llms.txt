@@ -29,6 +29,6 @@ offline .inkbloom file, no account needed.
 - 12 reading themes plus auto-night; 5 highlight colours with notes; bookmarks; in-book search; read-aloud.
 - Reading stats, goals and streaks stored only on the device; shelves, favourites and tags.
 - Offline dictionary with 152 built-in words plus user definitions; 77 interface languages with RTL support.
-- MOBI and AZW are not supported; convert to EPUB first. Scanned, image-only PDFs are rejected.
+- MOBI and AZW are not supported; convert to EPUB first. Normal PDFs work; only scanned, image-only PDFs can't be read yet (no offline text-recognition).
 - The .inkbloom transfer file is a plain ZIP, not encrypted; it is moved by the user, never uploaded.
 - Maker: Wajiha Noreen — https://www.wajiha.fun/ — Contact: support@wajiha.fun
