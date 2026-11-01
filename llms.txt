@@ -18,10 +18,10 @@ offline .inkbloom file, no account needed.
 - [Privacy](https://wjia-n.github.io/inkbloom-website/privacy.html)
 - [Terms](https://wjia-n.github.io/inkbloom-website/terms.html)
 
-## Downloads (version 1.3.4)
-- Android APK: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.4/inkbloom-reader-1.3.4.apk
-- Windows: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.4/inkbloom-reader-1.3.4-windows.zip
-- Linux: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.4/inkbloom-reader-1.3.4-linux.zip
+## Downloads (version 1.3.5)
+- Android APK: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.4/inkbloom-reader-1.3.5.apk
+- Windows: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.4/inkbloom-reader-1.3.5-windows.zip
+- Linux: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.4/inkbloom-reader-1.3.5-linux.zip
 - Web reader (PWA): https://wjia-n.github.io/inkbloom-reader/
 
 ## Key facts
