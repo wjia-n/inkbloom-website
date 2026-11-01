@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://reader.wajiha.fun/</loc></url>
-  <url><loc>https://reader.wajiha.fun/library.html</loc></url>
-  <url><loc>https://reader.wajiha.fun/reader.html</loc></url>
-  <url><loc>https://reader.wajiha.fun/import.html</loc></url>
-  <url><loc>https://reader.wajiha.fun/stats.html</loc></url>
-  <url><loc>https://reader.wajiha.fun/transfer.html</loc></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/index.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/library.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/reader.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/import.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/stats.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/transfer.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/about.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/vision.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/contact.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/privacy.html</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://wjia-n.github.io/inkbloom-website/terms.html</loc><lastmod>2026-11-01</lastmod></url>
 </urlset>

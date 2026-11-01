@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is InkBloom Reader?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "InkBloom Reader is a fully offline ebook reader that works without an account, without sign-in, and without an internet connection. Your books and reading progress live only on your own device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does InkBloom Reader need the internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. InkBloom Reader works fully offline. Books are stored on your device, and the reader never uploads your library, highlights, or reading progress anywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which ebook formats does InkBloom Reader support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "InkBloom Reader supports 9 formats: EPUB, PDF, TXT, Markdown, HTML, FB2, RTF, DOCX, and ODT. MOBI and AZW files are not supported; convert them to EPUB first. Scanned, image-only PDFs are rejected with a clear message, because they contain no readable text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I move my library to a new phone without an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open Transfer in the app and export one .inkbloom file. It contains your books, covers, highlights, notes, and reading progress. Copy that file to the new phone and import it there. No account, no cloud, and no sign-in are involved at any step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is InkBloom Reader free? Are there any purchases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, InkBloom Reader is free, and there are no purchases of any kind inside the app. There are no subscriptions, no locked features, and no ads in the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I read on the web without installing anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Open the web reader in any modern browser and import a book. Your library is saved in your browser's own storage, so closing the tab and reopening it brings back your books and your exact reading position."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does InkBloom remember my exact place in a book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. InkBloom saves your exact page and line, and the last book you were reading sits at the top of your library. Reopening a book returns you to the exact line you left, even days later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which devices can I use InkBloom on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can use InkBloom on Android phones and tablets, on Windows, on Linux, and in any modern web browser. The same offline, no-account reader runs on every platform."
+      }
+    }
+  ]
+}

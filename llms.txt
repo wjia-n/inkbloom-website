@@ -1,0 +1,34 @@
+# InkBloom Reader
+
+InkBloom Reader is a free, fully offline ebook reader with no account, no cloud, no purchases and no ads in the app.
+It opens EPUB, PDF, TXT, Markdown, HTML, FB2, RTF, DOCX and ODT books, remembers the exact page and line,
+and runs on Android, Windows, Linux and any modern web browser. A whole library moves to a new device with one
+offline .inkbloom file, no account needed.
+
+## Pages
+- [Index](https://wjia-n.github.io/inkbloom-website/index.html)
+- [Library](https://wjia-n.github.io/inkbloom-website/library.html)
+- [Reader](https://wjia-n.github.io/inkbloom-website/reader.html)
+- [Import](https://wjia-n.github.io/inkbloom-website/import.html)
+- [Stats](https://wjia-n.github.io/inkbloom-website/stats.html)
+- [Transfer](https://wjia-n.github.io/inkbloom-website/transfer.html)
+- [About](https://wjia-n.github.io/inkbloom-website/about.html)
+- [Vision](https://wjia-n.github.io/inkbloom-website/vision.html)
+- [Contact](https://wjia-n.github.io/inkbloom-website/contact.html)
+- [Privacy](https://wjia-n.github.io/inkbloom-website/privacy.html)
+- [Terms](https://wjia-n.github.io/inkbloom-website/terms.html)
+
+## Downloads (version 1.3.1)
+- Android APK: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.1/inkbloom-reader-1.3.1.apk
+- Windows: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.1/inkbloom-reader-1.3.1-windows.zip
+- Linux: https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.1/inkbloom-reader-1.3.1-linux.zip
+- Web reader (PWA): https://wjia-n.github.io/inkbloom-reader/
+
+## Key facts
+- No account, no sign-in, no cloud, no tracking in the app, no purchases, no ads in the app.
+- 12 reading themes plus auto-night; 5 highlight colours with notes; bookmarks; in-book search; read-aloud.
+- Reading stats, goals and streaks stored only on the device; shelves, favourites and tags.
+- Offline dictionary with 152 built-in words plus user definitions; 77 interface languages with RTL support.
+- MOBI and AZW are not supported; convert to EPUB first. Scanned, image-only PDFs are rejected.
+- The .inkbloom transfer file is a plain ZIP, not encrypted; it is moved by the user, never uploaded.
+- Maker: Wajiha Noreen — https://www.wajiha.fun/ — Contact: games@wajiha.fun

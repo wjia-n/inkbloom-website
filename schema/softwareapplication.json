@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "InkBloom Reader",
+  "applicationCategory": "Books",
+  "operatingSystem": [
+    "Android",
+    "Windows",
+    "Linux",
+    "Web"
+  ],
+  "softwareVersion": "1.3.1",
+  "url": "https://wjia-n.github.io/inkbloom-website/",
+  "downloadUrl": "https://github.com/wjia-n/inkbloom-downloads/releases/download/v1.3.1/inkbloom-reader-1.3.1.apk",
+  "author": {
+    "@type": "Person",
+    "name": "Wajiha Noreen"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "A fully offline ebook reader with no account, no cloud, no purchases and no ads in the app. It opens EPUB, PDF, TXT, Markdown, HTML, FB2, RTF, DOCX and ODT books, remembers your exact page and line, and moves your whole library to a new device with one offline file."
+}
