@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><link rel="icon" type="image/png" href="assets/logo.png"><title>Import books — InkBloom Reader</title><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ba1a1a","surface-tint":"#3f665a","on-primary-fixed":"#002019","secondary-container":"#fc9174","on-tertiary-fixed-variant":"#354d31","surface-variant":"#e8e2d1","background":"#fff9e9","on-error":"#ffffff","on-background":"#1e1c12","outline":"#717975","on-secondary-container":"#742814","tertiary-container":"#273e24","inverse-on-surface":"#f6f0df","surface-dim":"#dfdac9","tertiary-fixed-dim":"#b3ceab","on-tertiary-container":"#8fa988","surface":"#fff9e9","on-tertiary-fixed":"#0a2009","on-error-container":"#93000a","tertiary":"#122810","on-secondary":"#ffffff","secondary-fixed-dim":"#ffb4a1","on-secondary-fixed":"#3c0800","secondary-fixed":"#ffdbd2","outline-variant":"#c0c8c4","on-surface":"#1e1c12","surface-container":"#f4eedd","surface-container-high":"#eee8d7","on-surface-variant":"#414845","primary-container":"#173f35","primary":"#002920","on-primary-container":"#82aa9d","tertiary-fixed":"#ceeac5","surface-container-highest":"#e8e2d1","on-primary":"#ffffff","on-primary-fixed-variant":"#274e43","error-container":"#ffdad6","on-tertiary":"#ffffff","inverse-surface":"#333125","surface-container-low":"#f9f3e2","on-secondary-fixed-variant":"#7c2e19","surface-container-lowest":"#ffffff","secondary":"#9a442d","surface-bright":"#fff9e9","primary-fixed-dim":"#a6cfc1","primary-fixed":"#c1ecdd","inverse-primary":"#a6cfc1"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","gutter":"1rem","margin":"1rem","gutter-md":"1.5rem","margin-md":"2rem","space-xl":"2.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-lg":"2rem","space-2xl":"4rem","margin-lg":"3rem"},"fontFamily":{"body-ui":["Plus Jakarta Sans"],"body-reading-md":["Newsreader"],"label-mono":["Plus Jakarta Sans"],"body-ui-sm":["Plus Jakarta Sans"],"headline-lg":["Newsreader"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Newsreader"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Newsreader"],"display-lg-mobile":["Newsreader"],"headline-md":["Newsreader"],"display-lg":["Newsreader"],"body-reading-lg":["Newsreader"]},"fontSize":{"body-ui":["0.9375rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"body-reading-md":["1.125rem",{"lineHeight":"1.875rem","letterSpacing":"0.005em","fontWeight":"400"}],"label-mono":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"700"}],"body-ui-sm":["0.8125rem",{"lineHeight":"1.1875rem","fontWeight":"400"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"500"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"400"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.015em","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.005em","fontWeight":"500"}],"display-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.02em","fontWeight":"400"}],"body-reading-lg":["1.25rem",{"lineHeight":"2.125rem","letterSpacing":"0.01em","fontWeight":"400"}]}}}}</script><meta name="description" content="Import your books in batches or scan a whole folder. EPUB, PDF, Markdown, FB2, TXT, HTML, DOCX, RTF and ODT — parsed and stored on your device only.">
+<meta property="og:title" content="Import books — InkBloom Reader">
+<meta property="og:description" content="Import your books in batches or scan a whole folder. EPUB, PDF, Markdown, FB2, TXT, HTML, DOCX, RTF and ODT — parsed and stored on your device only.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+</head><body class="bg-surface font-body-ui text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><img alt="InkBloom logo" class="h-10 w-auto object-contain" src="assets/logo.png"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Ink Bloom</span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider hidden sm:inline">Grow your reading habit.</span></div></div><nav class="hidden md:flex items-center gap-space-xs lg:gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md rounded px-space-sm py-space-xs transition-colors"><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="index.html">Home</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="library" href="library.html">Library</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reader" href="reader.html">Reader</a><a aria-current="page" class="bg-primary-container text-on-primary font-label-md text-label-md rounded px-space-sm py-space-xs transition-colors" data-path="import" href="import.html">Import</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stats" href="stats.html">Stats</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transfer" href="transfer.html">Transfer</a></nav><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase">100% Offline &amp; Local</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full">
+<section class="max-w-[76rem] mx-auto w-full px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container text-primary font-label-mono text-label-mono uppercase tracking-wider mb-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>
+          Air-Gapped • Indexed In-Memory • Local Storage
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Import your Books</h1>
+<p class="font-body-reading-md text-body-reading-md text-on-surface-variant mt-space-xs">
+          Zero cloud upload. Files are parsed, indexed, and stored directly in your local device storage with archival precision.
+        </p>
+</div>
+<div class="inline-flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">shield</span>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-on-surface uppercase font-bold">Privacy Promise</span>
+<span class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Zero bytes ever leave your device memory</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="relative group bg-surface-container-low rounded-xl p-space-xl flex flex-col items-center justify-center text-center shadow-sm transition-all duration-200 cursor-pointer overflow-hidden" id="dropzone">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-tint/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-space-md text-primary group-hover:scale-105 transition-transform duration-300 shadow-sm">
+<span class="material-symbols-outlined text-[42px] text-surface-tint">auto_stories</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-space-xs">
+            Drop your ebook files here
+          </h2>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant max-w-sm mb-space-lg">
+            Drag files directly, or invoke a scan of your local desktop or mobile directories. Client-side unpacker activates instantly.
+          </p>
+<div class="flex flex-wrap items-center justify-center gap-space-sm w-full max-w-md">
+<label class="cursor-pointer bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-sm rounded hover:bg-primary-container transition-colors shadow-sm inline-flex items-center gap-space-xs active:scale-[0.99]">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Choose Files</span>
+<input accept=".epub,.pdf,.txt,.md,.html,.fb2,.rtf,.docx,.odt" class="hidden" id="file-input" multiple="" type="file"/>
+</label>
+<button class="bg-surface-container text-primary font-label-md text-label-md px-space-md py-space-sm rounded hover:bg-surface-container-high transition-colors shadow-sm inline-flex items-center gap-space-xs active:scale-[0.99]" id="scan-folder-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+<span>Scan Local Folder</span>
+</button>
+</div>
+<div class="mt-space-lg flex items-center gap-space-xs font-label-mono text-label-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Local file sandbox only. No network requests are made.</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">category</span>
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider">Supported Archival Formats</h3>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">9 Standard Formats</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-xs">
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">EPUB</span>
+<span class="font-label-mono text-label-mono text-surface-tint">REF-01</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">Native reflowable typography, TOC, &amp; cover extraction.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">PDF</span>
+<span class="font-label-mono text-label-mono text-surface-tint">VEC-02</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">Fixed vector layout rendering with client-side OCR cache.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Markdown</span>
+<span class="font-label-mono text-label-mono text-surface-tint">TXT-03</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">Notes, research outlines, &amp; longform markdown streams.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">FB2</span>
+<span class="font-label-mono text-label-mono text-surface-tint">XML-04</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">FictionBook 2.0 XML with embedded metadata parsing.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">TXT</span>
+<span class="font-label-mono text-label-mono text-surface-tint">RAW-05</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">Pure plaintext; automated chapter &amp; heading recognition.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">HTML</span>
+<span class="font-label-mono text-label-mono text-surface-tint">WEB-06</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">Clean reader mode distillation of local web pages.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">DOCX</span>
+<span class="font-label-mono text-label-mono text-surface-tint">DOC-07</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">Office documents parsed into distraction-free chapters.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">RTF</span>
+<span class="font-label-mono text-label-mono text-surface-tint">FMT-08</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">Rich text document conversions with retained italics.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface transition-colors flex flex-col gap-0.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">ODT</span>
+<span class="font-label-mono text-label-mono text-surface-tint">OPN-09</span>
+</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant text-[11px] leading-tight">OpenDocument format support with typography retention.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Import Queue &amp; History</h2>
+<p class="font-label-mono text-label-mono text-on-surface-variant uppercase mt-0.5">Local Index Store • 4 Books Staged</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-colors" title="Clear processed list" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm" id="import-items-list">
+<div class="bg-surface rounded-lg p-space-md shadow-sm transition-all hover:bg-surface-container-highest/20">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-14 bg-primary-container rounded flex-shrink-0 flex items-center justify-center text-on-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[20px]">book</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-0.5">
+<span class="font-headline-sm text-[1.05rem] text-primary truncate">A Sand County Almanac</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-mono text-[10px] font-bold">COMPLETED</span>
+</div>
+<p class="font-label-mono text-label-mono text-on-surface-variant">A_Sand_County_Almanac.epub</p>
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-0.5 mt-space-xs font-body-ui-sm text-body-ui-sm text-on-surface-variant">
+<span>4.2 MB</span>
+<span>•</span>
+<span>284 pages</span>
+<span>•</span>
+<span class="text-primary font-medium">Added to Reading</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-lg p-space-md shadow-sm transition-all hover:bg-surface-container-highest/20">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-14 bg-surface-container-high rounded flex-shrink-0 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-0.5">
+<span class="font-headline-sm text-[1.05rem] text-primary truncate">Silent Spring — Rachel Carson</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-mono text-[10px] font-bold">COMPLETED</span>
+</div>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Silent_Spring_Rachel_Carson.pdf</p>
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-0.5 mt-space-xs font-body-ui-sm text-body-ui-sm text-on-surface-variant">
+<span>12.8 MB</span>
+<span>•</span>
+<span>Fixed layout rendered</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-lg p-space-md shadow-sm transition-all hover:bg-surface-container-highest/20">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-14 bg-surface-container-high rounded flex-shrink-0 flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-0.5">
+<span class="font-headline-sm text-[1.05rem] text-primary truncate">Walden</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-mono text-[10px] font-bold">COMPLETED</span>
+</div>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Walden_Thoreau.txt</p>
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-0.5 mt-space-xs font-body-ui-sm text-body-ui-sm text-on-surface-variant">
+<span>850 KB</span>
+<span>•</span>
+<span>18 chapters recognized</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-lg p-space-md shadow-sm transition-all hover:bg-surface-container-highest/20">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-14 bg-surface-container rounded flex-shrink-0 flex items-center justify-center text-surface-tint shadow-sm">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-0.5">
+<span class="font-headline-sm text-[1.05rem] text-primary truncate">Selected Poems</span>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-mono text-[10px] font-bold">COMPLETED</span>
+</div>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Selected_Poems_Mary_Oliver.fb2</p>
+<div class="flex flex-wrap items-center gap-x-space-sm gap-y-0.5 mt-space-xs font-body-ui-sm text-body-ui-sm text-on-surface-variant">
+<span>1.4 MB</span>
+<span>•</span>
+<span>Indexed in poetry catalog</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container p-space-md rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-tint"></span>
+<span class="font-label-mono text-label-mono text-primary uppercase">Storage: IndexedDB Storage</span>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">19.25 MB in use</span>
+</div>
+</div>
+<div class="bg-primary text-on-primary rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">offline_bolt</span>
+<span class="font-label-mono text-label-mono uppercase tracking-wider">Independent Architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary">
+            No remote servers. No parsing telemetry.
+          </h3>
+<p class="font-body-ui-sm text-body-ui-sm text-on-primary/80 leading-relaxed">
+            Ink Bloom runs an autonomous WebWorker unpacker directly in your browser. Even if your internet connection is disconnected, import, layout computation, and highlight persistence will perform without degradation.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<script>
+    (function() {
+      const dropzone = document.getElementById('dropzone');
+      const fileInput = document.getElementById('file-input');
+      const scanFolderBtn = document.getElementById('scan-folder-btn');
+      const itemsList = document.getElementById('import-items-list');
+
+      if (!dropzone || !fileInput) return;
+
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropzone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropzone.classList.add('bg-surface-container');
+        });
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropzone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropzone.classList.remove('bg-surface-container');
+        });
+      });
+
+      dropzone.addEventListener('drop', (e) => {
+        const files = e.dataTransfer.files;
+        if (files && files.length > 0) {
+          handleFiles(files);
+        }
+      });
+
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          handleFiles(e.target.files);
+        }
+      });
+
+      if (scanFolderBtn) {
+        scanFolderBtn.addEventListener('click', () => {
+          fileInput.click();
+        });
+      }
+
+      function handleFiles(files) {
+        Array.from(files).forEach(file => {
+          const sizeKb = Math.round(file.size / 1024);
+          const sizeStr = sizeKb > 1024 ? (sizeKb / 1024).toFixed(1) + ' MB' : sizeKb + ' KB';
+          const ext = file.name.split('.').pop() || 'doc';
+
+          const card = document.createElement('div');
+          card.className = "bg-surface rounded-lg p-space-md shadow-sm transition-all hover:bg-surface-container-highest/20";
+          card.innerHTML = `
+            <div class="flex items-start gap-space-sm">
+              <div class="w-10 h-14 bg-surface-container-high rounded flex-shrink-0 flex items-center justify-center text-primary shadow-sm">
+                <span class="material-symbols-outlined text-[20px]">menu_book</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-space-xs mb-0.5">
+                  <span class="font-headline-sm text-[1.05rem] text-primary truncate">${file.name.replace(/\.[^/.]+$/, "")}</span>
+                  <span class="inline-flex items-center px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-mono text-[10px] font-bold">COMPLETED</span>
+                </div>
+                <p class="font-label-mono text-label-mono text-on-surface-variant">${file.name}</p>
+                <div class="flex flex-wrap items-center gap-x-space-sm gap-y-0.5 mt-space-xs font-body-ui-sm text-body-ui-sm text-on-surface-variant">
+                  <span>${sizeStr}</span>
+                  <span>&bull;</span>
+                  <span class="uppercase">${ext} Reflow parsed</span>
+                  <span>&bull;</span>
+                  <span class="text-primary font-medium">Added to Library</span>
+                </div>
+              </div>
+            </div>
+          `;
+          if (itemsList) {
+            itemsList.insertBefore(card, itemsList.firstChild);
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Ink Bloom</span><span class="font-label-mono text-label-mono text-on-surface-variant">• Purely local sanctuary</span></div><div class="font-label-mono text-label-mono text-on-surface-variant">Autonomous reading workspace • Zero tracking • Unbleached archival paper aesthetic</div></div></footer><div class="w-full bg-primary-container text-on-primary py-6"><div class="max-w-[76rem] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3"><span class="font-label-sm">InkBloom Reader v1.3.0 — free forever, no account, no cloud, nothing to buy.</span><span class="flex gap-4 font-label-sm"><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0.apk">Android APK</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0-windows.zip">Windows</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0-linux.zip">Linux</a><a class="underline" href="https://www.wajiha.fun/">wajiha.fun</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader">Source on GitHub</a></span></div></div></body></html>

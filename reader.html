@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><link rel="icon" type="image/png" href="assets/logo.png"><title>Distraction-free reader — InkBloom Reader</title><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ba1a1a","surface-tint":"#3f665a","on-primary-fixed":"#002019","secondary-container":"#fc9174","on-tertiary-fixed-variant":"#354d31","surface-variant":"#e8e2d1","background":"#fff9e9","on-error":"#ffffff","on-background":"#1e1c12","outline":"#717975","on-secondary-container":"#742814","tertiary-container":"#273e24","inverse-on-surface":"#f6f0df","surface-dim":"#dfdac9","tertiary-fixed-dim":"#b3ceab","on-tertiary-container":"#8fa988","surface":"#fff9e9","on-tertiary-fixed":"#0a2009","on-error-container":"#93000a","tertiary":"#122810","on-secondary":"#ffffff","secondary-fixed-dim":"#ffb4a1","on-secondary-fixed":"#3c0800","secondary-fixed":"#ffdbd2","outline-variant":"#c0c8c4","on-surface":"#1e1c12","surface-container":"#f4eedd","surface-container-high":"#eee8d7","on-surface-variant":"#414845","primary-container":"#173f35","primary":"#002920","on-primary-container":"#82aa9d","tertiary-fixed":"#ceeac5","surface-container-highest":"#e8e2d1","on-primary":"#ffffff","on-primary-fixed-variant":"#274e43","error-container":"#ffdad6","on-tertiary":"#ffffff","inverse-surface":"#333125","surface-container-low":"#f9f3e2","on-secondary-fixed-variant":"#7c2e19","surface-container-lowest":"#ffffff","secondary":"#9a442d","surface-bright":"#fff9e9","primary-fixed-dim":"#a6cfc1","primary-fixed":"#c1ecdd","inverse-primary":"#a6cfc1"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","gutter":"1rem","margin":"1rem","gutter-md":"1.5rem","margin-md":"2rem","space-xl":"2.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-lg":"2rem","space-2xl":"4rem","margin-lg":"3rem"},"fontFamily":{"body-ui":["Plus Jakarta Sans"],"body-reading-md":["Newsreader"],"label-mono":["Plus Jakarta Sans"],"body-ui-sm":["Plus Jakarta Sans"],"headline-lg":["Newsreader"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Newsreader"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Newsreader"],"display-lg-mobile":["Newsreader"],"headline-md":["Newsreader"],"display-lg":["Newsreader"],"body-reading-lg":["Newsreader"]},"fontSize":{"body-ui":["0.9375rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"body-reading-md":["1.125rem",{"lineHeight":"1.875rem","letterSpacing":"0.005em","fontWeight":"400"}],"label-mono":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"700"}],"body-ui-sm":["0.8125rem",{"lineHeight":"1.1875rem","fontWeight":"400"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"500"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"400"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.015em","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.005em","fontWeight":"500"}],"display-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.02em","fontWeight":"400"}],"body-reading-lg":["1.25rem",{"lineHeight":"2.125rem","letterSpacing":"0.01em","fontWeight":"400"}]}}}}</script><meta name="description" content="A calm reading page: serif, sans or mono type, cream, sepia or night paper, paged, scroll or spread flow, and read-aloud — with controls that appear only when you ask.">
+<meta property="og:title" content="Distraction-free reader — InkBloom Reader">
+<meta property="og:description" content="A calm reading page: serif, sans or mono type, cream, sepia or night paper, paged, scroll or spread flow, and read-aloud — with controls that appear only when you ask.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+</head><body class="bg-surface font-body-ui text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><img alt="InkBloom logo" class="h-10 w-auto object-contain" src="assets/logo.png"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Ink Bloom</span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider hidden sm:inline">Grow your reading habit.</span></div></div><nav class="hidden md:flex items-center gap-space-xs lg:gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md rounded px-space-sm py-space-xs transition-colors"><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="index.html">Home</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="library" href="library.html">Library</a><a aria-current="page" class="bg-primary-container text-on-primary font-label-md text-label-md rounded px-space-sm py-space-xs transition-colors" data-path="reader" href="reader.html">Reader</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="import" href="import.html">Import</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="stats" href="stats.html">Stats</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transfer" href="transfer.html">Transfer</a></nav><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase">100% Offline &amp; Local</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full relative select-none">
+<!-- Top Floating Reader Ambient Bar (Tap/Hover to Reveal) -->
+<div class="sticky top-16 z-40 w-full transition-all duration-300 transform translate-y-0 opacity-100 backdrop-blur-md bg-surface/90 shadow-sm" id="readerTopChrome">
+<div class="max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg h-14 flex items-center justify-between gap-gutter">
+<!-- Book & Chapter Breadcrumb -->
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant transition-colors" id="libraryBackBtn" title="Back to Shelf">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[1rem] leading-tight text-primary truncate">The Overstory</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider truncate">Chapter IV: The Whispering Canopy</span>
+</div>
+</div>
+<!-- Quick Actions (Typography Panel Trigger, Audio Bar Toggle, Bookmark) -->
+<div class="flex items-center gap-space-xs sm:gap-space-sm">
+<!-- Audio Read-Aloud Mini Bar Trigger -->
+<button class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-label-sm transition-colors" id="toggleAudioBarBtn" title="Read Aloud Narration">
+<span class="material-symbols-outlined text-surface-tint text-[18px]">volume_up</span>
+<span class="hidden sm:inline">Listen</span>
+</button>
+<!-- Typography / Appearance Sheet Toggle -->
+<button class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-label-sm transition-colors" id="toggleAppearanceBtn" title="Typography &amp; Paper Settings">
+<span class="material-symbols-outlined text-[18px]">format_size</span>
+<span class="hidden sm:inline">Aa</span>
+</button>
+<!-- Bookmark Indicator Button -->
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container text-secondary transition-colors" id="pageBookmarkBtn" title="Bookmark Page 142">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+<!-- Zen Focus Toggle -->
+<button class="w-8 h-8 hidden md:flex items-center justify-center rounded hover:bg-surface-container text-on-surface-variant transition-colors" id="zenFocusBtn" title="Hide Navigation Chrome">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Collapsible Typography & Appearance Settings Drawer -->
+<div class="hidden transition-all duration-200 bg-surface-container-low shadow-md px-margin md:px-margin-md py-space-md" id="appearanceDrawer">
+<div class="max-w-[44rem] mx-auto flex flex-col gap-space-md">
+<!-- Row 1: Font Family & Paper Palette -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Font Family Choice -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface-variant">Typeface</span>
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded">
+<button class="font-choice flex-1 py-1 px-2 rounded font-headline-sm text-sm text-center bg-primary text-on-primary shadow-sm transition-all" data-font="serif">Serif</button>
+<button class="font-choice flex-1 py-1 px-2 rounded font-body-ui text-sm text-center text-on-surface hover:bg-surface transition-all" data-font="sans">Sans</button>
+<button class="font-choice flex-1 py-1 px-2 rounded font-label-mono text-sm text-center text-on-surface hover:bg-surface transition-all" data-font="mono">Mono</button>
+</div>
+</div>
+<!-- Theme Palette Selector -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface-variant">Paper Tone</span>
+<div class="flex items-center gap-2 pt-0.5">
+<button class="theme-pill flex-1 py-1.5 px-2 rounded flex items-center justify-center gap-1.5 bg-surface text-primary shadow-sm font-label-sm text-label-sm" data-theme="cream">
+<span class="w-3.5 h-3.5 rounded-full bg-[#FFF8E7] shadow-inner"></span>
+<span>Cream</span>
+</button>
+<button class="theme-pill flex-1 py-1.5 px-2 rounded flex items-center justify-center gap-1.5 bg-surface-container hover:bg-surface text-on-surface font-label-sm text-label-sm transition-colors" data-theme="sepia">
+<span class="w-3.5 h-3.5 rounded-full bg-[#EFE3C3]"></span>
+<span>Sepia</span>
+</button>
+<button class="theme-pill flex-1 py-1.5 px-2 rounded flex items-center justify-center gap-1.5 bg-surface-container hover:bg-surface text-on-surface font-label-sm text-label-sm transition-colors" data-theme="forest">
+<span class="w-3.5 h-3.5 rounded-full bg-[#122E28]"></span>
+<span>Night</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Row 2: Text Scaling, Line Height & Margins -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Text Size Stepper -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface-variant">Font Size</span>
+<div class="flex items-center justify-between bg-surface-container rounded px-3 py-1">
+<button class="p-1 hover:text-primary transition-colors font-label-md text-base" id="fontDecBtn">A-</button>
+<span class="font-label-mono text-label-mono text-on-surface-variant" id="fontSizeDisplay">100%</span>
+<button class="p-1 hover:text-primary transition-colors font-label-md text-base" id="fontIncBtn">A+</button>
+</div>
+</div>
+<!-- Reading Layout Mode -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface-variant">Flow Mode</span>
+<div class="flex items-center bg-surface-container p-1 rounded text-center">
+<button class="flow-pill flex-1 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm shadow-sm" data-flow="paged">Paged</button>
+<button class="flow-pill flex-1 py-1 rounded text-on-surface hover:bg-surface font-label-sm text-label-sm transition-colors" data-flow="scroll">Scroll</button>
+<button class="flow-pill flex-1 py-1 rounded text-on-surface hover:bg-surface font-label-sm text-label-sm transition-colors" data-flow="spread">Spread</button>
+</div>
+</div>
+<!-- Page Margins -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface-variant">Margin Width</span>
+<div class="flex items-center justify-around bg-surface-container py-1 rounded">
+<button class="margin-pill px-3 py-1 rounded text-on-surface font-label-sm text-label-sm hover:bg-surface" data-margin="compact">Narrow</button>
+<button class="margin-pill px-3 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm shadow-sm" data-margin="optimal">Sanctuary</button>
+<button class="margin-pill px-3 py-1 rounded text-on-surface font-label-sm text-label-sm hover:bg-surface" data-margin="wide">Wide</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Natural Read-Aloud Audio Ribbon (TTS Voice Deck) -->
+<div class="hidden transition-all duration-200 bg-surface-container px-margin md:px-margin-md py-2.5 shadow-inner" id="audioPlayerDeck">
+<div class="max-w-[44rem] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+<!-- Voice metadata & pulse indicator -->
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-surface-tint opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+</span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-sm text-primary">Aura • Whisper Warmth (Offline Neural Engine)</span>
+<span class="font-label-mono text-[0.625rem] text-on-surface-variant uppercase">Reading Paragraph 4 of 18 · Synced cadence</span>
+</div>
+</div>
+<!-- Controls: Speed, Play/Pause, Skip -->
+<div class="flex items-center gap-2">
+<!-- Voice Speed Toggle -->
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface font-label-mono text-label-mono text-on-surface" id="ttsSpeedBtn">1.0×</button>
+<button class="p-1 rounded-full hover:bg-surface-container-high text-on-surface transition-colors" title="Rewind sentence">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<!-- Play / Pause Button -->
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow hover:bg-primary-container transition-all" id="ttsPlayPauseBtn">
+<span class="material-symbols-outlined text-[18px]" id="ttsPlayIcon" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<button class="p-1 rounded-full hover:bg-surface-container-high text-on-surface transition-colors" title="Forward sentence">
+<span class="material-symbols-outlined text-[20px]">forward_10</span>
+</button>
+<button class="p-1 ml-1 rounded hover:bg-surface-container-high text-on-surface-variant" id="closeAudioBtn" title="Close Narration Deck">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN EDITORIAL READING CANVAS -->
+<div class="w-full flex justify-center px-margin md:px-margin-md py-space-xl transition-all duration-300" id="readingContainer">
+<!-- Paper Sheet Canvas -->
+<article class="w-full max-w-[44rem] relative bg-surface-container-lowest/70 backdrop-blur-sm rounded-xl shadow-md px-6 sm:px-12 md:px-16 py-12 md:py-16 select-text transition-all duration-300" id="readingSurface">
+<!-- Top-right Ornamental Bookmark Ribbon Tab -->
+<div class="absolute -top-3 right-10 flex flex-col items-center pointer-events-none group">
+<div class="w-7 h-10 bg-secondary rounded-t-sm shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">eco</span>
+</div>
+<div class="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-t-[8px] border-t-secondary"></div>
+</div>
+<!-- Chapter Header Meta Header -->
+<header class="mb-12 text-center flex flex-col items-center">
+<div class="flex items-center gap-2 mb-3">
+<span class="w-6 h-px bg-on-surface-variant/40"></span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant">Act I • Roots &amp; Spores</span>
+<span class="w-6 h-px bg-on-surface-variant/40"></span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight max-w-xl mx-auto">
+          The Whispering Canopy
+        </h1>
+<div class="mt-4 flex items-center justify-center gap-4 text-on-surface-variant font-label-mono text-label-mono uppercase tracking-wider">
+<span>Richard Powers</span>
+<span>•</span>
+<span>Folio 142</span>
+</div>
+</header>
+<!-- Literary Prose Body with Custom Aesthetic Typography -->
+<div class="font-body-reading-md text-body-reading-lg text-on-surface leading-loose space-y-7 transition-all" id="proseBody">
+<!-- Opening drop-cap style paragraph -->
+<p class="relative">
+<span class="float-left text-5xl font-headline-lg leading-none pt-1 pr-3 text-primary">F</span>irst, there was nothing but a slow, subterranean hum—the mineral pulse of cambium expanding against bark in an unlit autumn. Nicholas Hoel stands in the damp shadow of the chestnut tree that had witnessed seven generations of weddings, droughts, and prairie blizzards. To the human ear, the crown of the giant appears impassive, caught in an austere stillness; yet beneath the green loam, <span class="bg-[#A8C3A0]/45 text-on-surface px-1 py-0.5 rounded cursor-pointer transition-colors hover:bg-[#A8C3A0]/70 group relative inline" title="Annotation: Key biological metaphor">every fungal hypha is exchanging nitrogen for sucrose<span class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 p-2 bg-primary text-on-primary font-body-ui-sm text-xs rounded shadow-lg z-50 pointer-events-none"><strong>Margin Note:</strong> Key biological metaphor. Mycorrhizal networks function as the forest's analog central nervous system.</span></span> with quiet botanical precision.
+        </p>
+<!-- Paragraph with Terracotta Highlight -->
+<p>
+          "The tree is an organism made of time," he writes in his moleskin notebook, his ink bleeding into unbleached rag paper. <span class="bg-[#E07A5F]/40 text-on-surface px-1 py-0.5 rounded cursor-pointer transition-colors hover:bg-[#E07A5F]/65">It measures centuries not in heartbeats, but in the slow accretions of annual xylem rings, each drought recorded as a tightly wound confession.</span> What we call solitary growth is an optical delusion manufactured by beings trapped in fleeting seventy-year lives.
+        </p>
+<!-- Paragraph with Warm Gold / Amber Highlight -->
+<p>
+          A breeze turns the leaves of the crown silver-belly up. Sunlight filters through the overarching limbs in slanting, crystalline pillars. <span class="bg-[#f0c868]/45 text-on-surface px-1 py-0.5 rounded cursor-pointer transition-colors hover:bg-[#f0c868]/70">Trees have long known what man has scarcely suspected: that to thrive in isolation is a structural impossibility.</span> A forest that starves its weakest seedling inevitably weakens the perimeter against the oncoming winter squalls. The collective canopy shields, dampens, redistributes rain, and breathes in a cadence that spans eons.
+        </p>
+<!-- Visual Reading Break: Archival Botanical Glyph -->
+<div class="py-6 flex items-center justify-center gap-4 text-surface-tint">
+<span class="w-12 h-px bg-surface-container-highest"></span>
+<span class="material-symbols-outlined text-[18px]">temp_preferences_custom</span>
+<span class="w-12 h-px bg-surface-container-highest"></span>
+</div>
+<!-- Paragraph with Sky / Slate Highlight -->
+<p>
+          Miles south, near the edge of the creek, Patricia Westerford unpacks her field spectroscope. Her hands are weathered by alpine wind and the caustic juices of bruised pine needles. She gathers fallen samples into glass vats. When she tests the chemical emissions released after an insect swarm attacks the eastern willows, the readings are unmistakable: <span class="bg-[#9bbad6]/45 text-on-surface px-1 py-0.5 rounded cursor-pointer transition-colors hover:bg-[#9bbad6]/70">the wounded trees are emitting volatile terpenes to alert their undamaged neighbors four hundred yards downwind.</span> Within hours, the leaves of untouched trees across the valley thicken their tannins, rendering themselves unpalatable to beetles before the first claw touches a stem.
+        </p>
+<!-- Paragraph with Rose / Lavender Highlight -->
+<p>
+          This is not inert biomass; it is conversation. An ancient, deliberate dialect spoken through aromatics and underground mycelial cables. <span class="bg-[#e4b5d6]/45 text-on-surface px-1 py-0.5 rounded cursor-pointer transition-colors hover:bg-[#e4b5d6]/70">To listen requires shedding the restless velocity of electric machines and stepping into the geologic patience of an oak.</span> We are not caretakers of the earth; we are the prodigals who wandered away from the orchard and forgot the vocabulary of the grove.
+        </p>
+<p>
+          She sits on a mossy boulder until dusk blankets the ravine in indigo velvet. Overhead, the canopy murmurs with the rustle of nocturnal warblers and the crisp descent of acorns. The world is complete, continuous, and whole, waiting for someone patient enough to read its unhurried lines.
+        </p>
+</div>
+<!-- Inline Highlight Legend & Margin Annotation Drawer -->
+<footer class="mt-14 pt-8 border-t-0 flex flex-col gap-4 bg-surface-container-low/60 p-4 rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">stylus_note</span>
+            5 Active Highlights on Folio 142
+          </span>
+<span class="font-label-mono text-label-mono text-surface-tint">Synchronized Locally</span>
+</div>
+<!-- Palette Swatch Badges -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-[#A8C3A0]/30 text-primary font-label-mono text-[0.6875rem]">
+<span class="w-2 h-2 rounded-full bg-[#A8C3A0]"></span>
+<span>Sage: Biological Metaphor</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-[#E07A5F]/30 text-on-secondary-container font-label-mono text-[0.6875rem]">
+<span class="w-2 h-2 rounded-full bg-[#E07A5F]"></span>
+<span>Terracotta: Temporal Philosophy</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-[#f0c868]/30 text-[#684a00] font-label-mono text-[0.6875rem]">
+<span class="w-2 h-2 rounded-full bg-[#f0c868]"></span>
+<span>Amber: Collective Interdependence</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-[#9bbad6]/30 text-[#143d59] font-label-mono text-[0.6875rem]">
+<span class="w-2 h-2 rounded-full bg-[#9bbad6]"></span>
+<span>Slate: Chemical Signaling</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-[#e4b5d6]/30 text-[#541e46] font-label-mono text-[0.6875rem]">
+<span class="w-2 h-2 rounded-full bg-[#e4b5d6]"></span>
+<span>Rose: Human Reclamation</span>
+</div>
+</div>
+</footer>
+</article>
+</div>
+<!-- FLOATING QUICK ANNOTATION HOVER-TOOLBAR (Simulated Level 2) -->
+<div class="hidden fixed z-50 -translate-x-1/2 bg-primary text-on-primary px-3 py-1.5 rounded-full shadow-lg items-center gap-3 transition-opacity" id="selectionPill">
+<div class="flex items-center gap-1">
+<button class="w-4 h-4 rounded-full bg-[#A8C3A0] hover:scale-125 transition-transform" title="Sage Highlight"></button>
+<button class="w-4 h-4 rounded-full bg-[#E07A5F] hover:scale-125 transition-transform" title="Terracotta Highlight"></button>
+<button class="w-4 h-4 rounded-full bg-[#f0c868] hover:scale-125 transition-transform" title="Amber Highlight"></button>
+<button class="w-4 h-4 rounded-full bg-[#9bbad6] hover:scale-125 transition-transform" title="Slate Highlight"></button>
+<button class="w-4 h-4 rounded-full bg-[#e4b5d6] hover:scale-125 transition-transform" title="Rose Highlight"></button>
+</div>
+<span class="w-px h-3.5 bg-on-primary/30"></span>
+<button class="text-on-primary hover:text-secondary-fixed transition-colors flex items-center gap-1 font-label-sm text-xs">
+<span class="material-symbols-outlined text-[15px]">edit_note</span>
+<span>Note</span>
+</button>
+<button class="text-on-primary hover:text-secondary-fixed transition-colors flex items-center gap-1 font-label-sm text-xs">
+<span class="material-symbols-outlined text-[15px]">dictionary</span>
+<span>Define</span>
+</button>
+</div>
+<!-- DOCKED BOTTOM CONTROL & PROGRESS BAR -->
+<footer class="sticky bottom-0 z-40 w-full backdrop-blur-md bg-surface/95 transition-all duration-300 shadow-md" id="readerBottomChrome">
+<!-- Progress Indicator Bar -->
+<div class="w-full bg-surface-container-high h-1 cursor-pointer group relative">
+<div class="bg-primary h-full transition-all duration-150" id="readingProgressTrack" style="width: 28.3%;"></div>
+<!-- Hover tooltip -->
+<div class="hidden group-hover:block absolute bottom-2 left-[28.3%] -translate-x-1/2 px-2 py-0.5 bg-primary text-on-primary font-label-mono text-[0.625rem] rounded shadow whitespace-nowrap">
+        Page 142 of 502 (28%)
+      </div>
+</div>
+<!-- Bottom Metadata & Navigation Panel -->
+<div class="max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg h-12 flex items-center justify-between text-on-surface-variant font-label-mono text-label-mono">
+<!-- Paging Navigator -->
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 hover:text-primary transition-colors py-1 px-2 rounded hover:bg-surface-container" id="prevPageBtn">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span class="hidden sm:inline">Prev</span>
+</button>
+<span class="text-on-surface font-label-md text-xs">Page 142 of 502</span>
+<button class="flex items-center gap-1 hover:text-primary transition-colors py-1 px-2 rounded hover:bg-surface-container" id="nextPageBtn">
+<span class="hidden sm:inline">Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Habit Reading Rhythm Status -->
+<div class="hidden md:flex items-center gap-3">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">timelapse</span>
+<span>12 min left in chapter</span>
+</div>
+<span>•</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[15px]">local_florist</span>
+<span>Bloom streak: 34 mins today</span>
+</div>
+</div>
+<!-- Quick Chapter Jumper -->
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant hidden sm:inline">28% Completed</span>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface hover:text-primary transition-colors flex items-center" id="openTOCBtn" title="Table of Contents">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</button>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  // Interactive Controls for Ink Bloom Reader
+  (function initReader() {
+    const toggleAppearanceBtn = document.getElementById('toggleAppearanceBtn');
+    const appearanceDrawer = document.getElementById('appearanceDrawer');
+    const toggleAudioBarBtn = document.getElementById('toggleAudioBarBtn');
+    const audioPlayerDeck = document.getElementById('audioPlayerDeck');
+    const closeAudioBtn = document.getElementById('closeAudioBtn');
+    const ttsPlayPauseBtn = document.getElementById('ttsPlayPauseBtn');
+    const ttsPlayIcon = document.getElementById('ttsPlayIcon');
+    const ttsSpeedBtn = document.getElementById('ttsSpeedBtn');
+    const proseBody = document.getElementById('proseBody');
+    const readingSurface = document.getElementById('readingSurface');
+    const fontIncBtn = document.getElementById('fontIncBtn');
+    const fontDecBtn = document.getElementById('fontDecBtn');
+    const fontSizeDisplay = document.getElementById('fontSizeDisplay');
+    const pageBookmarkBtn = document.getElementById('pageBookmarkBtn');
+    const zenFocusBtn = document.getElementById('zenFocusBtn');
+    const readerTopChrome = document.getElementById('readerTopChrome');
+    const readerBottomChrome = document.getElementById('readerBottomChrome');
+
+    let currentScale = 100;
+    let isPlayingAudio = true;
+    const speeds = ['0.8×', '1.0×', '1.2×', '1.5×'];
+    let speedIdx = 1;
+    let isBookmarked = true;
+    let zenMode = false;
+
+    // Toggle Typography Panel
+    if (toggleAppearanceBtn && appearanceDrawer) {
+      toggleAppearanceBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        appearanceDrawer.classList.toggle('hidden');
+      });
+    }
+
+    // Toggle Audio Reader Bar
+    if (toggleAudioBarBtn && audioPlayerDeck) {
+      toggleAudioBarBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        audioPlayerDeck.classList.toggle('hidden');
+      });
+    }
+
+    if (closeAudioBtn && audioPlayerDeck) {
+      closeAudioBtn.addEventListener('click', () => {
+        audioPlayerDeck.classList.add('hidden');
+      });
+    }
+
+    // TTS Play/Pause Micro-interaction
+    if (ttsPlayPauseBtn && ttsPlayIcon) {
+      ttsPlayPauseBtn.addEventListener('click', () => {
+        isPlayingAudio = !isPlayingAudio;
+        ttsPlayIcon.textContent = isPlayingAudio ? 'pause' : 'play_arrow';
+      });
+    }
+
+    // TTS Speed Cycling
+    if (ttsSpeedBtn) {
+      ttsSpeedBtn.addEventListener('click', () => {
+        speedIdx = (speedIdx + 1) % speeds.length;
+        ttsSpeedBtn.textContent = speeds[speedIdx];
+      });
+    }
+
+    // Bookmark Toggle State
+    if (pageBookmarkBtn) {
+      pageBookmarkBtn.addEventListener('click', () => {
+        isBookmarked = !isBookmarked;
+        pageBookmarkBtn.style.fontVariationSettings = isBookmarked ? "'FILL' 1" : "'FILL' 0";
+        pageBookmarkBtn.classList.toggle('text-secondary', isBookmarked);
+        pageBookmarkBtn.classList.toggle('text-on-surface-variant', !isBookmarked);
+      });
+    }
+
+    // Font Sizing Scaling
+    if (fontIncBtn && fontDecBtn && fontSizeDisplay && proseBody) {
+      fontIncBtn.addEventListener('click', () => {
+        if (currentScale < 140) {
+          currentScale += 10;
+          proseBody.style.fontSize = (1.25 * (currentScale / 100)) + 'rem';
+          proseBody.style.lineHeight = (2.125 * (currentScale / 100)) + 'rem';
+          fontSizeDisplay.textContent = currentScale + '%';
+        }
+      });
+
+      fontDecBtn.addEventListener('click', () => {
+        if (currentScale > 80) {
+          currentScale -= 10;
+          proseBody.style.fontSize = (1.25 * (currentScale / 100)) + 'rem';
+          proseBody.style.lineHeight = (2.125 * (currentScale / 100)) + 'rem';
+          fontSizeDisplay.textContent = currentScale + '%';
+        }
+      });
+    }
+
+    // Typeface Switcher
+    const fontBtns = document.querySelectorAll('.font-choice');
+    fontBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        fontBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('text-on-surface');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface');
+
+        const fontType = btn.getAttribute('data-font');
+        if (fontType === 'serif') {
+          proseBody.className = proseBody.className.replace(/font-\S+/g, '') + ' font-body-reading-md';
+        } else if (fontType === 'sans') {
+          proseBody.className = proseBody.className.replace(/font-\S+/g, '') + ' font-body-ui';
+        } else if (fontType === 'mono') {
+          proseBody.className = proseBody.className.replace(/font-\S+/g, '') + ' font-label-mono';
+        }
+      });
+    });
+
+    // Theme Paper Mood Switcher
+    const themeBtns = document.querySelectorAll('.theme-pill');
+    themeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        themeBtns.forEach(b => {
+          b.classList.remove('bg-surface', 'text-primary', 'shadow-sm');
+          b.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        btn.classList.add('bg-surface', 'text-primary', 'shadow-sm');
+        btn.classList.remove('bg-surface-container', 'text-on-surface');
+
+        const theme = btn.getAttribute('data-theme');
+        if (readingSurface) {
+          if (theme === 'cream') {
+            readingSurface.style.backgroundColor = '#fff9e9';
+            readingSurface.style.color = '#1e1c12';
+          } else if (theme === 'sepia') {
+            readingSurface.style.backgroundColor = '#f4eedd';
+            readingSurface.style.color = '#2d2417';
+          } else if (theme === 'forest') {
+            readingSurface.style.backgroundColor = '#122e28';
+            readingSurface.style.color = '#ceeac5';
+          }
+        }
+      });
+    });
+
+    // Margin Switcher
+    const marginBtns = document.querySelectorAll('.margin-pill');
+    marginBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        marginBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('text-on-surface');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface');
+
+        const marginType = btn.getAttribute('data-margin');
+        if (readingSurface) {
+          readingSurface.classList.remove('max-w-[36rem]', 'max-w-[44rem]', 'max-w-[54rem]');
+          if (marginType === 'compact') readingSurface.classList.add('max-w-[36rem]');
+          else if (marginType === 'optimal') readingSurface.classList.add('max-w-[44rem]');
+          else if (marginType === 'wide') readingSurface.classList.add('max-w-[54rem]');
+        }
+      });
+    });
+
+    // Zen Mode Toggle (tap background or button to minimize distraction)
+    if (zenFocusBtn) {
+      zenFocusBtn.addEventListener('click', () => {
+        zenMode = !zenMode;
+        if (zenMode) {
+          readerTopChrome.classList.add('-translate-y-full', 'opacity-0');
+          readerBottomChrome.classList.add('translate-y-full', 'opacity-0');
+        } else {
+          readerTopChrome.classList.remove('-translate-y-full', 'opacity-0');
+          readerBottomChrome.classList.remove('translate-y-full', 'opacity-0');
+        }
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low py-space-lg shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Ink Bloom</span><span class="font-label-mono text-label-mono text-on-surface-variant">• Purely local sanctuary</span></div><div class="font-label-mono text-label-mono text-on-surface-variant">Autonomous reading workspace • Zero tracking • Unbleached archival paper aesthetic</div></div></footer><div class="w-full bg-primary-container text-on-primary py-6"><div class="max-w-[76rem] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3"><span class="font-label-sm">InkBloom Reader v1.3.0 — free forever, no account, no cloud, nothing to buy.</span><span class="flex gap-4 font-label-sm"><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0.apk">Android APK</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0-windows.zip">Windows</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0-linux.zip">Linux</a><a class="underline" href="https://www.wajiha.fun/">wajiha.fun</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader">Source on GitHub</a></span></div></div></body></html>

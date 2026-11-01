@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><link rel="icon" type="image/png" href="assets/logo.png"><title>Reading stats & goals — InkBloom Reader</title><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ba1a1a","surface-tint":"#3f665a","on-primary-fixed":"#002019","secondary-container":"#fc9174","on-tertiary-fixed-variant":"#354d31","surface-variant":"#e8e2d1","background":"#fff9e9","on-error":"#ffffff","on-background":"#1e1c12","outline":"#717975","on-secondary-container":"#742814","tertiary-container":"#273e24","inverse-on-surface":"#f6f0df","surface-dim":"#dfdac9","tertiary-fixed-dim":"#b3ceab","on-tertiary-container":"#8fa988","surface":"#fff9e9","on-tertiary-fixed":"#0a2009","on-error-container":"#93000a","tertiary":"#122810","on-secondary":"#ffffff","secondary-fixed-dim":"#ffb4a1","on-secondary-fixed":"#3c0800","secondary-fixed":"#ffdbd2","outline-variant":"#c0c8c4","on-surface":"#1e1c12","surface-container":"#f4eedd","surface-container-high":"#eee8d7","on-surface-variant":"#414845","primary-container":"#173f35","primary":"#002920","on-primary-container":"#82aa9d","tertiary-fixed":"#ceeac5","surface-container-highest":"#e8e2d1","on-primary":"#ffffff","on-primary-fixed-variant":"#274e43","error-container":"#ffdad6","on-tertiary":"#ffffff","inverse-surface":"#333125","surface-container-low":"#f9f3e2","on-secondary-fixed-variant":"#7c2e19","surface-container-lowest":"#ffffff","secondary":"#9a442d","surface-bright":"#fff9e9","primary-fixed-dim":"#a6cfc1","primary-fixed":"#c1ecdd","inverse-primary":"#a6cfc1"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","gutter":"1rem","margin":"1rem","gutter-md":"1.5rem","margin-md":"2rem","space-xl":"2.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-lg":"2rem","space-2xl":"4rem","margin-lg":"3rem"},"fontFamily":{"body-ui":["Plus Jakarta Sans"],"body-reading-md":["Newsreader"],"label-mono":["Plus Jakarta Sans"],"body-ui-sm":["Plus Jakarta Sans"],"headline-lg":["Newsreader"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Newsreader"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Newsreader"],"display-lg-mobile":["Newsreader"],"headline-md":["Newsreader"],"display-lg":["Newsreader"],"body-reading-lg":["Newsreader"]},"fontSize":{"body-ui":["0.9375rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"body-reading-md":["1.125rem",{"lineHeight":"1.875rem","letterSpacing":"0.005em","fontWeight":"400"}],"label-mono":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"700"}],"body-ui-sm":["0.8125rem",{"lineHeight":"1.1875rem","fontWeight":"400"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"500"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.01em","fontWeight":"400"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.015em","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.005em","fontWeight":"500"}],"display-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.02em","fontWeight":"400"}],"body-reading-lg":["1.25rem",{"lineHeight":"2.125rem","letterSpacing":"0.01em","fontWeight":"400"}]}}}}</script><meta name="description" content="Quiet reading stats kept on your machine alone: daily bloom ring, streaks, pages and hours — no leaderboards, no social pressure.">
+<meta property="og:title" content="Reading stats & goals — InkBloom Reader">
+<meta property="og:description" content="Quiet reading stats kept on your machine alone: daily bloom ring, streaks, pages and hours — no leaderboards, no social pressure.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+</head><body class="bg-surface font-body-ui text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><img alt="InkBloom logo" class="h-10 w-auto object-contain" src="assets/logo.png"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Ink Bloom</span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider hidden sm:inline">Grow your reading habit.</span></div></div><nav class="hidden md:flex items-center gap-space-xs lg:gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md rounded px-space-sm py-space-xs transition-colors"><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="index.html">Home</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="library" href="library.html">Library</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reader" href="reader.html">Reader</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="import" href="import.html">Import</a><a aria-current="page" class="bg-primary-container text-on-primary font-label-md text-label-md rounded px-space-sm py-space-xs transition-colors" data-path="stats" href="stats.html">Stats</a><a class="font-label-md text-label-md text-on-surface-variant px-space-sm py-space-xs rounded hover:bg-surface-container hover:text-on-surface transition-colors" data-path="transfer" href="transfer.html">Transfer</a></nav><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded"><span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase">100% Offline &amp; Local</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full">
+<!-- Content Container -->
+<div class="max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl flex flex-col gap-space-2xl w-full">
+<!-- Editorial Intro & Philosophy Statement -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">Self-Regulated Garden</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Your Reading Habit</h1>
+<p class="font-body-reading-md text-body-reading-md text-on-surface-variant leading-relaxed">
+          Personal metrics stored locally on this machine alone. No social leaderboards, no vanity metrics, no peer pressure—simply quiet communion with the written word.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-auto bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-surface-tint text-[20px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-mono text-label-mono text-on-surface uppercase">Archival Year • 2025</span>
+</div>
+</div>
+<!-- Top KPI Grid: Archival Card Mosaic -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-md">
+<!-- Card 1: Streak -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Garden Vitality</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">nest_eco_leaf</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="font-headline-md text-headline-md text-primary">18 Days Active</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Continuous evening reflection</p>
+</div>
+<div class="flex items-center gap-1.5 pt-space-xs">
+<span class="h-1.5 w-6 rounded-full bg-surface-tint"></span>
+<span class="h-1.5 w-6 rounded-full bg-surface-tint"></span>
+<span class="h-1.5 w-6 rounded-full bg-surface-tint"></span>
+<span class="h-1.5 w-6 rounded-full bg-secondary-container"></span>
+<span class="font-label-mono text-label-mono text-on-surface-variant ml-auto">Cycle 3</span>
+</div>
+</div>
+<!-- Card 2: Books Finished -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Volumes Bound</span>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="font-headline-md text-headline-md text-primary">14 Finished</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Annual intention: 24 books</p>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 58%;"></div>
+</div>
+</div>
+<!-- Card 3: Total Hours -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Time in Sanctuary</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">hourglass_bottom</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="font-headline-md text-headline-md text-primary">86.4 Hours</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Daily cadence: ~42 mins</p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[14px] text-surface-tint">check_circle</span>
+<span>Consistent pacing</span>
+</div>
+</div>
+<!-- Card 4: Pages Turned -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm transition-transform hover:-translate-y-0.5 duration-200">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Leaves Turned</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="font-headline-md text-headline-md text-primary">4,912 Pages</div>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Archival density: 16.3 p/day</p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Essays &amp; Fiction</span>
+</div>
+</div>
+</div>
+<!-- Centerpiece Split Section: Habit Bloom Ring & Reading Velocity -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-stretch">
+<!-- Left (7 Cols): The Daily Goal Bloom Anchor -->
+<div class="lg:col-span-7 bg-primary-container text-on-primary rounded-xl p-space-lg md:p-space-xl flex flex-col justify-between relative overflow-hidden shadow-md">
+<!-- Subtle botanical water-mark aesthetic background element -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-primary/20 pointer-events-none blur-2xl"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono text-label-mono text-on-primary-container uppercase tracking-wider">Today's Cultivation</span>
+<h2 class="font-headline-md text-headline-md text-on-primary">Daily Bloom Ring</h2>
+</div>
+<div class="inline-flex items-center gap-space-xs bg-primary px-space-sm py-space-xs rounded text-primary-fixed font-label-mono text-label-mono">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+            Goal Reached
+          </div>
+</div>
+<!-- Ring Visualization + Core Data -->
+<div class="my-space-lg flex flex-col sm:flex-row items-center gap-space-xl relative z-10">
+<div class="relative w-44 h-44 flex-shrink-0 flex items-center justify-center">
+<!-- Custom Circular Progress Ring SVG -->
+<svg class="w-44 h-44 -rotate-90" viewbox="0 0 160 160">
+<!-- Background Track -->
+<circle cx="80" cy="80" fill="transparent" r="66" stroke="#274E43" stroke-width="10"></circle>
+<!-- Outer Goal Accomplishment Ring (Terracotta / Secondary accent) -->
+<circle class="transition-all duration-700 ease-out" cx="80" cy="80" fill="transparent" r="66" stroke="#FC9174" stroke-dasharray="414.69" stroke-dashoffset="0" stroke-linecap="round" stroke-width="10"></circle>
+<!-- Inner Pace Ring (Sage / Tint) -->
+<circle class="transition-all duration-700 ease-out" cx="80" cy="80" fill="transparent" r="50" stroke="#8FA988" stroke-dasharray="314.15" stroke-dashoffset="60" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg text-on-primary font-serif leading-none" id="minutes-display">35</span>
+<span class="font-label-mono text-label-mono text-on-primary-container uppercase mt-1">/ <span id="target-display">30</span> Mins</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm text-left">
+<div class="font-headline-sm text-headline-sm text-on-primary">A peaceful reserve of silence.</div>
+<p class="font-body-ui text-body-ui text-on-primary-container">
+              You surpassed your quiet quota at 4:18 PM while immersed in <span class="text-on-primary italic font-serif">The Book of Disquiet</span>.
+            </p>
+<div class="flex items-center gap-space-sm pt-space-xs font-label-mono text-label-mono text-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>116% of daily baseline realized</span>
+</div>
+</div>
+</div>
+<!-- Interactive Goal Adjuster -->
+<div class="pt-space-md border-t-0 bg-primary/40 p-space-md rounded-lg relative z-10 flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-on-primary font-label-sm text-label-sm">
+<span>Adjust daily intention</span>
+<span class="font-label-mono text-label-mono text-on-primary-container" id="goal-label">Current: 30 minutes/day</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs pt-space-xs">
+<button class="goal-btn py-space-xs rounded bg-primary text-on-primary-container hover:bg-primary-container hover:text-on-primary font-label-mono text-label-mono transition-colors text-center" onclick="setGoal(15)">15m</button>
+<button class="goal-btn py-space-xs rounded bg-secondary text-on-secondary font-label-mono text-label-mono transition-colors text-center" onclick="setGoal(30)">30m</button>
+<button class="goal-btn py-space-xs rounded bg-primary text-on-primary-container hover:bg-primary-container hover:text-on-primary font-label-mono text-label-mono transition-colors text-center" onclick="setGoal(45)">45m</button>
+<button class="goal-btn py-space-xs rounded bg-primary text-on-primary-container hover:bg-primary-container hover:text-on-primary font-label-mono text-label-mono transition-colors text-center" onclick="setGoal(60)">60m</button>
+</div>
+</div>
+</div>
+<!-- Right (5 Cols): Reading Velocity & Best Hours -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg md:p-space-xl rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Circadian Rhythms</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">nightlight</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Peak Attention Window</h2>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">
+            Your deepest reading velocity naturally surfaces during twilight hours.
+          </p>
+</div>
+<!-- Custom Velocity Histogram Chart -->
+<div class="my-space-md flex flex-col gap-space-sm">
+<div class="h-36 w-full flex items-end justify-between gap-1.5 px-2 pt-4 bg-surface-container-low rounded-lg">
+<!-- 6am -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-surface-tint transition-all" style="height: 12%;"></div>
+</div>
+<!-- 9am -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-surface-tint transition-all" style="height: 22%;"></div>
+</div>
+<!-- 12pm -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-surface-tint transition-all" style="height: 38%;"></div>
+</div>
+<!-- 3pm -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-surface-tint transition-all" style="height: 18%;"></div>
+</div>
+<!-- 6pm -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-surface-tint transition-all" style="height: 45%;"></div>
+</div>
+<!-- 9pm - PEAK -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group relative">
+<div class="w-full bg-secondary-container rounded-t transition-all" style="height: 88%;"></div>
+</div>
+<!-- 10pm - PEAK -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group relative">
+<div class="w-full bg-secondary rounded-t transition-all" style="height: 96%;"></div>
+</div>
+<!-- Midnight -->
+<div class="flex flex-col items-center flex-1 h-full justify-end group">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-surface-tint transition-all" style="height: 30%;"></div>
+</div>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label-mono text-label-mono px-1">
+<span>6 AM</span>
+<span>NOON</span>
+<span class="text-secondary font-bold">9:30 - 10:45 PM</span>
+<span>12 AM</span>
+</div>
+</div>
+<!-- Detail Footnote -->
+<div class="bg-surface-container-high p-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-surface-tint text-[20px]">psychology</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Pre-Sleep Sanctuary</span>
+<span class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">72% of all pages turn within 90 minutes of sleep.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Activity Heatmap: 12-Week Botanical Grid -->
+<div class="bg-surface-container p-space-lg md:p-space-xl rounded-xl flex flex-col gap-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Seasons of Mind</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">84-Day Bloom Tapestry</h2>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-mono text-label-mono">
+<span>Dormant</span>
+<span class="w-3.5 h-3.5 rounded bg-surface-container-highest inline-block"></span>
+<span class="w-3.5 h-3.5 rounded bg-tertiary-fixed inline-block"></span>
+<span class="w-3.5 h-3.5 rounded bg-surface-tint inline-block"></span>
+<span class="w-3.5 h-3.5 rounded bg-primary inline-block"></span>
+<span class="w-3.5 h-3.5 rounded bg-secondary inline-block"></span>
+<span>Full Bloom (60m+)</span>
+</div>
+</div>
+<!-- Scrollable Matrix for smaller screens -->
+<div class="overflow-x-auto pb-space-xs">
+<div class="min-w-[640px] flex flex-col gap-1.5 pt-space-xs">
+<!-- Month labels -->
+<div class="flex text-on-surface-variant font-label-mono text-label-mono pl-8 justify-between pr-2">
+<span>NOVEMBER</span>
+<span>DECEMBER</span>
+<span>JANUARY</span>
+<span>FEBRUARY (PRESENT)</span>
+</div>
+<!-- Heatmap Rows (7 Days) -->
+<div class="flex items-center gap-2">
+<span class="w-6 font-label-mono text-label-mono text-on-surface-variant">Mon</span>
+<div class="grid grid-flow-col grid-cols-12 gap-1.5 flex-1">
+<div class="h-4 rounded bg-surface-container-highest" title="0 mins"></div>
+<div class="h-4 rounded bg-tertiary-fixed" title="15 mins"></div>
+<div class="h-4 rounded bg-surface-tint" title="34 mins"></div>
+<div class="h-4 rounded bg-primary" title="45 mins"></div>
+<div class="h-4 rounded bg-tertiary-fixed" title="20 mins"></div>
+<div class="h-4 rounded bg-surface-container-highest" title="0 mins"></div>
+<div class="h-4 rounded bg-surface-tint" title="35 mins"></div>
+<div class="h-4 rounded bg-primary" title="50 mins"></div>
+<div class="h-4 rounded bg-secondary" title="75 mins"></div>
+<div class="h-4 rounded bg-surface-tint" title="30 mins"></div>
+<div class="h-4 rounded bg-primary" title="45 mins"></div>
+<div class="h-4 rounded bg-secondary" title="65 mins"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-6 font-label-mono text-label-mono text-on-surface-variant">Tue</span>
+<div class="grid grid-flow-col grid-cols-12 gap-1.5 flex-1">
+<div class="h-4 rounded bg-tertiary-fixed"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-tertiary-fixed"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-primary"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-6 font-label-mono text-label-mono text-on-surface-variant">Wed</span>
+<div class="grid grid-flow-col grid-cols-12 gap-1.5 flex-1">
+<div class="h-4 rounded bg-surface-container-highest"></div>
+<div class="h-4 rounded bg-surface-container-highest"></div>
+<div class="h-4 rounded bg-tertiary-fixed"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-6 font-label-mono text-label-mono text-on-surface-variant">Thu</span>
+<div class="grid grid-flow-col grid-cols-12 gap-1.5 flex-1">
+<div class="h-4 rounded bg-tertiary-fixed"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-tertiary-fixed"></div>
+<div class="h-4 rounded bg-surface-container-highest"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-primary"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-6 font-label-mono text-label-mono text-on-surface-variant">Fri</span>
+<div class="grid grid-flow-col grid-cols-12 gap-1.5 flex-1">
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-6 font-label-mono text-label-mono text-on-surface-variant">Sat</span>
+<div class="grid grid-flow-col grid-cols-12 gap-1.5 flex-1">
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-6 font-label-mono text-label-mono text-on-surface-variant">Sun</span>
+<div class="grid grid-flow-col grid-cols-12 gap-1.5 flex-1">
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-primary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-secondary"></div>
+<div class="h-4 rounded bg-surface-tint"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs text-on-surface-variant font-body-ui-sm text-body-ui-sm pt-space-xs">
+<span>74 active days recorded out of the past 84 sessions.</span>
+<span class="font-label-mono text-label-mono text-surface-tint uppercase">Current active run: 18 consecutive days</span>
+</div>
+</div>
+<!-- Books Finished Shelf: Horizontal Display with Archival Touch -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">Shelved Thoughts</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recently Completed</h2>
+</div>
+<a class="font-label-md text-label-md text-surface-tint hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span>Catalog Archive</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Book Grid/Shelf Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-gutter-md">
+<!-- Book 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-sm hover:shadow transition-shadow">
+<div class="w-full aspect-[2/3] rounded-lg overflow-hidden bg-primary-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cover of The Book of Disquiet, Fernando Pessoa. Minimalist deep forest green cloth textured cover with elegant classical cream serif title typography in warm ambient morning light." src="assets/img/img-13.jpg"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-md px-1.5 py-0.5 rounded text-on-primary font-label-mono text-label-mono">
+              384p
+            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1 leading-snug">The Book of Disquiet</h3>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Fernando Pessoa</p>
+<div class="flex items-center gap-1 text-secondary pt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5 pt-space-xs font-label-mono text-label-mono text-on-surface-variant">
+<span>Finished Feb 14</span>
+<span>12h 45m reading time</span>
+</div>
+</div>
+<!-- Book 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-sm hover:shadow transition-shadow">
+<div class="w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Book cover of Invisible Cities by Italo Calvino. Archival parchment textured paper with subtle geometric line art illustration of labyrinthine arches and delicate Italian typography." src="assets/img/img-14.jpg"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-md px-1.5 py-0.5 rounded text-on-primary font-label-mono text-label-mono">
+              165p
+            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1 leading-snug">Invisible Cities</h3>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Italo Calvino</p>
+<div class="flex items-center gap-1 text-secondary pt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5 pt-space-xs font-label-mono text-label-mono text-on-surface-variant">
+<span>Finished Feb 02</span>
+<span>5h 18m reading time</span>
+</div>
+</div>
+<!-- Book 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-sm hover:shadow transition-shadow">
+<div class="w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Artistic cover of In Praise of Shadows by Junichiro Tanizaki. Warm Japanese aesthetic featuring subtle ink wash shadows on fibrous washi paper and gold leaf accents." src="assets/img/img-12.jpg"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-md px-1.5 py-0.5 rounded text-on-primary font-label-mono text-label-mono">
+              92p
+            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1 leading-snug">In Praise of Shadows</h3>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Jun'ichirō Tanizaki</p>
+<div class="flex items-center gap-1 text-secondary pt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5 pt-space-xs font-label-mono text-label-mono text-on-surface-variant">
+<span>Finished Jan 26</span>
+<span>3h 05m reading time</span>
+</div>
+</div>
+<!-- Book 4 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-sm hover:shadow transition-shadow">
+<div class="w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cover of The Peregrine by J.A. Baker. Rich earth tones, terracotta sky and deep muted evergreen landscape with silhouette of a falcon in flight, vintage book cloth aesthetic." src="assets/img/img-15.jpg"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-md px-1.5 py-0.5 rounded text-on-primary font-label-mono text-label-mono">
+              208p
+            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1 leading-snug">The Peregrine</h3>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">J.A. Baker</p>
+<div class="flex items-center gap-1 text-secondary pt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5 pt-space-xs font-label-mono text-label-mono text-on-surface-variant">
+<span>Finished Jan 15</span>
+<span>7h 20m reading time</span>
+</div>
+</div>
+<!-- Book 5 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-sm hover:shadow transition-shadow">
+<div class="w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cover of Silence in the Age of Noise by Erling Kagge. Minimalist pure snow white and subdued ice-gray typography, quiet and contemplative artistic layout." src="assets/img/img-11.jpg"/>
+<div class="absolute top-2 right-2 bg-primary/80 backdrop-blur-md px-1.5 py-0.5 rounded text-on-primary font-label-mono text-label-mono">
+              160p
+            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-primary line-clamp-1 leading-snug">Silence: In the Age of Noise</h3>
+<p class="font-body-ui-sm text-body-ui-sm text-on-surface-variant">Erling Kagge</p>
+<div class="flex items-center gap-1 text-secondary pt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5 pt-space-xs font-label-mono text-label-mono text-on-surface-variant">
+<span>Finished Jan 05</span>
+<span>4h 42m reading time</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Quote Banner: Grounding Philosophy -->
+<div class="bg-surface-container-high rounded-xl p-space-lg md:p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md max-w-3xl">
+<span class="material-symbols-outlined text-surface-tint text-3xl flex-shrink-0 mt-1">format_quote</span>
+<div class="flex flex-col gap-1">
+<p class="font-headline-sm text-headline-sm text-primary italic font-serif">
+            “Reading is that fruitful miracle of a communication in the midst of solitude.”
+          </p>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">— Marcel Proust, <span class="italic font-serif normal-case">Days of Reading</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="bg-primary text-on-primary hover:bg-tertiary font-label-md text-label-md px-space-md py-space-sm rounded transition-all active:scale-[0.99] flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Local Ledger</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    function setGoal(minutes) {
+      const targetDisplay = document.getElementById('target-display');
+      const goalLabel = document.getElementById('goal-label');
+      if (targetDisplay) targetDisplay.innerText = minutes;
+      if (goalLabel) goalLabel.innerText = 'Current: ' + minutes + ' minutes/day';
+
+      const buttons = document.querySelectorAll('.goal-btn');
+      buttons.forEach(btn => {
+        if (btn.innerText === minutes + 'm') {
+          btn.className = 'goal-btn py-space-xs rounded bg-secondary text-on-secondary font-label-mono text-label-mono transition-colors text-center';
+        } else {
+          btn.className = 'goal-btn py-space-xs rounded bg-primary text-on-primary-container hover:bg-primary-container hover:text-on-primary font-label-mono text-label-mono transition-colors text-center';
+        }
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-[76rem] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Ink Bloom</span><span class="font-label-mono text-label-mono text-on-surface-variant">• Purely local sanctuary</span></div><div class="font-label-mono text-label-mono text-on-surface-variant">Autonomous reading workspace • Zero tracking • Unbleached archival paper aesthetic</div></div></footer><div class="w-full bg-primary-container text-on-primary py-6"><div class="max-w-[76rem] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3"><span class="font-label-sm">InkBloom Reader v1.3.0 — free forever, no account, no cloud, nothing to buy.</span><span class="flex gap-4 font-label-sm"><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0.apk">Android APK</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0-windows.zip">Windows</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader/releases/download/v1.3.0/inkbloom-reader-1.3.0-linux.zip">Linux</a><a class="underline" href="https://www.wajiha.fun/">wajiha.fun</a><a class="underline" href="https://github.com/wjia-n/inkbloom-reader">Source on GitHub</a></span></div></div></body></html>
